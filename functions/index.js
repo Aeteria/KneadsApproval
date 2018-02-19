@@ -13,6 +13,7 @@ exports.onPush = functions.https.onRequest((req, res) => {
     console.log("twit.consumer_secret", functions.config().twit.comsumer_secret);
     console.log("twit.access_token", functions.config().twit.access_token);
     console.log("twit.access_token_secret", functions.config().twit.access_token_secret);
+    console.log(req.body);
     console.log(JSON.parse(req.body));
     res.status(200).send(req.body);
 });
